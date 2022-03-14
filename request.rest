@@ -1,0 +1,144 @@
+POST http://localhost:3003/institution/create
+Content-Type: application/json
+
+{
+    "name": "Edson Institution 3",
+    "cep": "03114-000",
+    "state": "São Paulo",
+    "city": "São Paulo",
+    "neighborhood": "Mooca",
+    "adress": "Avenida paes de barros, 1252, apto 103"
+}
+
+###
+POST http://localhost:3003/administrator/create
+Content-Type: application/json
+
+{
+    "name": "Edson Teste Email",
+    "email": "magnini.edson@gmail.com",
+    "username": "Edsonmail",
+    "password": "123456",
+    "institutionId": "59637ec5-6ca1-48bf-a008-9879a32338c9"
+}
+
+###
+POST http://localhost:3003/administrator/login
+Content-Type: application/json
+
+{
+    "email": "magnini.edson@gmail.com",
+    "password": "123456"
+}
+
+###
+DELETE  http://localhost:3003/administrator/delete
+Content-Type: application/json
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImYxZmZkOThmLWYxYTItNGMyMy05NThiLWZkOWFkOGVhOWY4MSIsImVtYWlsIjoibWFnbmluaS5lZHNvbkBnbWFpbC5jb20iLCJpYXQiOjE2NDcyMzA1OTgsImV4cCI6MTY0NzIzMTMxOH0.oMhsRfQk_ff-zfn2sYFN6MkJygAmS74aaSMnbeXMTqg
+
+
+###
+POST http://localhost:3003/administrator/activateAccount/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImYxZmZkOThmLWYxYTItNGMyMy05NThiLWZkOWFkOGVhOWY4MSIsImVtYWlsIjoibWFnbmluaS5lZHNvbkBnbWFpbC5jb20iLCJpYXQiOjE2NDcyMjM4NDAsImV4cCI6MTY0NzIyNDU2MH0.qNz3aA9wrfHyglyQ-HnPH5g-9mUdRySm_mpMA9Og3fk
+Content-Type: application/json
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImYxZmZkOThmLWYxYTItNGMyMy05NThiLWZkOWFkOGVhOWY4MSIsImVtYWlsIjoibWFnbmluaS5lZHNvbkBnbWFpbC5jb20iLCJpYXQiOjE2NDcyMjM4NDAsImV4cCI6MTY0NzIyNDU2MH0.qNz3aA9wrfHyglyQ-HnPH5g-9mUdRySm_mpMA9Og3fk
+
+
+###
+POST http://localhost:3003/administrator/edit
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImYxZmZkOThmLWYxYTItNGMyMy05NThiLWZkOWFkOGVhOWY4MSIsImVtYWlsIjoibWFnbmluaS5lZHNvbkBnbWFpbC5jb20iLCJpYXQiOjE2NDcyMjM4NDAsImV4cCI6MTY0NzIyNDU2MH0.qNz3aA9wrfHyglyQ-HnPH5g-9mUdRySm_mpMA9Og3fk
+
+{
+    "name": "Edson teste",
+    "email": "edson_magnini@gmail.com",
+    "password": "12345678"
+}
+
+###
+POST http://localhost:3003/administrator/changeEmail/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImYxZmZkOThmLWYxYTItNGMyMy05NThiLWZkOWFkOGVhOWY4MSIsImVtYWlsIjoibWFnbmluaS5lZHNvbkBnbWFpbC5jb20iLCJpYXQiOjE2NDcyMjQyMzYsImV4cCI6MTY0NzIyNDk1Nn0.zOPK7I1PuEtuAzNEAw7WIu6fF9C3bAOblT6jPfLZz9o
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImYxZmZkOThmLWYxYTItNGMyMy05NThiLWZkOWFkOGVhOWY4MSIsImVtYWlsIjoibWFnbmluaS5lZHNvbkBnbWFpbC5jb20iLCJpYXQiOjE2NDcyMjQyMzYsImV4cCI6MTY0NzIyNDk1Nn0.zOPK7I1PuEtuAzNEAw7WIu6fF9C3bAOblT6jPfLZz9o
+
+
+###
+POST http://localhost:3003/administrator/create
+Content-Type: application/json
+
+{
+    "name": "Edson",
+    "email": "edson1@hotmail.com",
+    "username": "EdsonName",
+    "password": "123456"
+}
+
+###
+POST http://localhost:3003/book/create
+Content-Type: application/json
+
+{
+    "name": "MAQUIAVEL O PRÍNCIPE",
+    "edition": "2ª Edição",
+    "year": "2014",
+    "releaseDate": "2014-11-01",
+    "preservation": "NEW",
+    "institutionId": "53fb19dc-ab86-4271-a3b1-4f002ce7c7e6",
+    "quantity": 5,
+    "adress": "B-1"
+}
+
+###
+POST http://localhost:3003/book/create
+Content-Type: application/json
+
+{
+    "name": "MAQUIAVEL O PRÍNCIPE",
+    "edition": "1ª Edição",
+    "year": "2014",
+    "releaseDate": "2014-11-01",
+    "preservation": "NEW",
+    "institutionId": "4fa76b6f-c84c-43eb-a39c-efa89479ec62",
+    "quantity": 5,
+    "adress": "B-1"
+}
+
+###
+POST http://localhost:3003/book/create
+Content-Type: application/json
+
+{
+    "name": "O LIVRO DOS CINCO ANÉIAS",
+    "edition": "5ª Edição",
+    "year": "2015",
+    "releaseDate": "2015",
+    "preservation": "NEW",
+    "institutionId": "59637ec5-6ca1-48bf-a008-9879a32338c9",
+    "quantity": 3,
+    "adress": "B-2"
+}
+
+###
+POST http://localhost:3003/book/edit/f9166809-0cfd-459a-bdd3-4f817d8bb90a
+Content-Type: application/json
+
+{
+    "edition": "2ª Edição",
+    "preservation": "USED",
+    "institutionId": "520916fe-681b-42a7-955c-a59b819a06f1"
+}
+
+###
+GET http://localhost:3003/institution/collection
+Content-Type: application/json
+
+###
+GET http://localhost:3003/institution/8784a424-0eff-48a8-9b7c-791b69d8a6d1/collection
+Content-Type: application/json
+
+###
+POST http://localhost:3003/book/donate
+Content-Type: application/json
+
+{
+    "id": "82e64839-1aad-4ed7-b450-712052739728",
+    "quantity": 1
+}

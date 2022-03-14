@@ -1,0 +1,61 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Administrator {
+  id             String      @id @default(uuid())
+  name           String
+  email          String      @unique
+  username       String      @unique
+  password       String
+  status         Status      @default(UNVERIFIED)
+  institution_id Institution @relation(fields: [institutionId], references: [id])
+
+  @@map("administrator")
+  institutionId String
+}
+
+model Institution {
+  id           String @id @default(uuid())
+  name         String
+  cep          String
+  state        String
+  city         String
+  neighborhood String
+  adress       String
+
+  Book Book[]
+  Administrator Administrator[]
+  @@map("institution")
+}
+
+model Book {
+  id             String       @id @default(uuid())
+  name           String
+  edition        String
+  year           String
+  release_date   String
+  preservation   Preservation
+  institution    Institution  @relation(fields: [institution_id], references: [id])
+  institution_id String
+  quantity       Int
+  adress         String
+
+  @@map("book")
+}
+
+enum Preservation {
+  NEW
+  USED
+  DAMAGED
+}
+
+enum Status {
+  VERIFIED
+  UNVERIFIED
+}
